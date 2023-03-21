@@ -1,7 +1,6 @@
 export type GitHubUser = {
 	id: number;
 	login: string;
-	avatar_url: string;
 };
 
 export type GitHubIssue = {
@@ -9,5 +8,7 @@ export type GitHubIssue = {
 	number: number;
 	url: string;
 	title: string;
-	user: GitHubUser & { assignee: GitHubUser };
+	created_at: string;
+	user: GitHubUser;
+	assignee: GitHubUser;
 };
